@@ -1,0 +1,1057 @@
+/*Geral*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+    color: #d3d3d3;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000;
+    width: 100vw;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display:flex;
+}
+
+h2.title{
+    color: #fff;
+    font-size: 55px;
+    text-align: center;
+    margin: 100px 0;
+    text-shadow: 0 0 40px #04f5a5;
+}
+
+h2.title span{
+    color:#09f7a7;
+    border-bottom: 1px solid #12b87e;
+}
+
+/*Fim geral*/
+
+
+/*inicio header*/
+.header{
+    margin: 30px auto;
+    padding: 0;
+    background-color: #131313;
+    border-radius: 50px;
+    width: 65vw;
+}
+
+/*Inicio navbar*/
+
+.navbar{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+a img{
+    width: 110px;
+    height: 110px;
+    padding: 6px;
+    transition: 0.2s;
+    margin: 5px;
+}
+a img:hover{
+    transform: scale(1.2);
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar ul li{
+    margin: 10px 20px 0 20px;
+}
+.navbar ul li a{
+    color:#fff;
+    font-size: 35px;
+    text-decoration: none;
+    transition: 0.5s;
+    position: relative;
+    padding: 5px 15px;
+}
+.navbar ul:hover li a{
+    opacity: 0.4; 
+}
+.navbar ul li a:hover{
+    opacity: 1;
+    transform: scale(0);
+}
+.navbar ul li a::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right, #00110183, #1efab1);
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: 0.2s;
+    border-radius: 50px;
+}
+.navbar ul li a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform 0.2s;
+}
+
+/*Fim navbar*/
+
+/*Inicio navbar-mobile*/
+
+.header .navbar .navbarBtn{
+    border:none;
+    background-color:transparent;
+    border-top: 3px solid #04f5a5;
+    cursor: pointer;
+    display: none;
+}
+
+.header .navbar .navbarBtn::before,
+.header .navbar .navbarBtn::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #04f5a5;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+/*Fim header*/
+
+/*inicio Section-Inicio*/
+
+section.inicio{
+    display: flex;
+    width: 100vw;
+    padding: 40px 4%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.inicio .interface{
+    padding: 5px;
+}
+section.inicio .flex{
+    align-items: center;
+    justify-content: center;
+}
+.inicio .apresentacao{
+    padding: 5px;
+    margin: 0 auto;
+}
+
+section.inicio h1{
+    margin: 15px 10px 15px 0px;
+    font-size: 70px;
+    font-weight: 800;
+    text-align: left;
+
+    background: linear-gradient(to left, #6ef8ca, #04f5a5, #11af78, #4cebb6);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes degrade {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+section.inicio p{
+    color:#d3d3d3;
+    font-size:30px;
+    margin-left:10px;
+    text-align: left;
+}
+
+section.inicio .btn-Mais-Sobre{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: transparent;
+}
+.flex .btn-Mais-Sobre img{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.flex .btn-Mais-Sobre button{
+    width: 200px;
+    height: 60px;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 50px;
+    color:#fff;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    cursor:pointer;
+    transition: 0.2s;
+    
+}
+.flex .btn-Mais-Sobre button:hover{
+    border: none;
+    background-color: #1efab1dc;
+    box-shadow: 0px 0px 8px #1efab1;
+    color: black;
+    transform: scale(1.05);
+}
+
+.flex .img-section1 img{
+    width: 550px;
+    height: 550px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0px;
+    }
+    100%{
+        top:50px;
+    }
+}
+
+/*Fim Section-Inicio*/
+
+/*inicio section Habilidades*/
+
+section.habilidades{
+    margin: 0 auto;
+    padding:40px 4%;
+    overflow:hidden;
+}
+
+.habilidades .interface{
+    max-width: 1854px;
+    justify-content: center;
+    padding: 10px;
+    overflow-y: hidden;
+}
+   
+section.habilidades .flex{
+    margin: 0;
+    gap:10%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:20px;
+}
+
+.habilidades .habilidades-Box{
+    color: #fff;
+    text-align:center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:40px;
+    width: 250px;
+    height: 385px;
+    padding: 30px;
+    transition: .2s;
+    border-radius: 40px;
+    
+}
+
+.habilidades .habilidades-Box:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #09f7a7;
+}
+
+
+.habilidades .habilidades-Box i{
+    font-size: 4rem;
+}
+
+.habilidades .habilidades-Box h3{
+    color:#09f7a7;
+    margin: 15px 0px;
+    font-size: 2rem;
+    cursor:default;
+}
+
+.habilidades .habilidades-Box li{
+    color: #d3d3d3;
+    font-size: 15px;
+    text-align: left;
+    cursor:default;
+}
+
+/*Fim section Habilidades*/
+
+/*Inicio section Sobre*/
+section.sobre{
+    display:flex;
+    width:100vw;
+    padding: 40px 4%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sobre .interface{
+    max-width: 1854px;
+    padding: 10px;
+}
+
+.sobre .flex{
+    gap:10px;
+    align-items: center;
+}
+
+.sobre .flex .text-Sobre{
+    align-items: left;
+}
+
+.sobre .text-Sobre h3{
+    text-decoration:dashed;
+    font-size: 3rem;
+    line-height: 40px;
+    margin-bottom: 25px;
+    color:#04f5a5;
+}
+.sobre .text-Sobre span{
+    color: #fff;
+}
+
+.sobre .text-Sobre p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.sobre .sobre-Esquerda img{
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.sobre .sobre-Direita img{
+    width: 460px;
+    height: 580px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.sobre .sobre-Direita .imgRepansividade{
+    display:none;
+}
+
+/*Fim section Sobre*/
+
+/*Inicio section Projetos*/
+
+section.projetos{
+    display:flex;
+    width:100vw;
+    padding: 40px 4%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.projetos .interface{
+    width: 100vw;
+}
+
+.projetos .interface h2{
+    margin-bottom: 200px;
+}
+
+.projetos .flex{
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-projetos{
+    box-shadow: 0 0 30px #09f7a7;
+    border:none;
+    width: 350px;
+    height: 500px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+}
+
+.img-projetos:hover{
+    background-position: 100% 100%;
+}
+
+.projetos .overlay{
+    border:none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #000000e3;
+    border-radius: 30px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.projetos .overlay:hover{
+    opacity: 1;
+}
+
+/*Fim section Projetos*/
+
+/*Inicio section contato*/
+section.contato{
+    display:flex;
+    width:100vw;
+    padding: 40px 4%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.contato .interface{
+    max-width: 1854px;
+    padding: 20px;
+}
+
+.contato .flex{
+    align-items: center;
+    gap: 50px;
+}
+
+.contato .interface h2{
+    margin-bottom: 250px;
+}
+
+.flex img{
+    width: 450px;
+    height: 450px;
+} 
+
+.card-Contato{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 0 8px #ddd;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+#icon-Link{
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+}
+.card-Contato a{
+    text-decoration: none;
+    margin: 10px;
+}
+
+.card-Contato h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.card-Contato i{
+    font-size: 1rem;
+    color: #09f7a7;
+}
+
+#icon-Link:hover{
+    transform: scale(1.3);
+    color:#09f7a7;
+}
+/*Fim section contato*/
+
+/*inicio footer*/
+footer{    
+    display:flex;
+    flex-direction: column;
+    width:100vw;
+    padding: 40px 4%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #131313;
+}
+footer .flex{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    padding: 50px;
+}
+footer .flex .btn-Footer{
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    border:none;
+}
+.btn-Footer a{
+    text-decoration: none;
+}
+
+.btn-Footer:hover{
+    transform: scale(1.2);
+    color:#09f7a7;
+    box-shadow: 0 0 10px #09f7a7;
+    border:none;
+}
+.btn-Footer i{
+    font-size: 3rem;
+    color: #000;
+}
+/*fim footer*/
+
+/*Inicio respansividade*/
+
+/*Laptops e monitores 1707px*/
+@media only screen and (min-width: 1441px) and (max-width: 1707px){
+    .header{
+        width: 85vw;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+/*laptops 1440px*/
+@media only screen and (min-width: 1101px) and (max-width: 1440px){
+    .header{
+        width: 85vw;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /*section sobre*/
+    .sobre .text-Sobre{
+        width: 50vw;
+    }
+    .sobre .text-Sobre h3{
+        font-size: 50px;
+    }
+    .sobre .text-Sobre p{
+        font-size: 25px;
+    }
+    .sobre .sobre-Esquerda{
+        float:right;
+    }
+    .sobre .sobre-Esquerda img{
+        display: block;
+        width: 300px;
+        height: 300px;
+    }
+
+    .sobre .sobre-Direita{
+        display: flex;
+        flex-direction: column;
+        margin-right: 18px;
+        align-items: center;
+        justify-content: center;
+    }
+    .sobre .sobre-Direita img{
+        width: 300px;
+        height: 385px;
+    }
+    .sobre .sobre-Direita .imgRepansividade{
+        display: none;
+    }
+
+    .flex img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .flex .card-Contato{
+        width: 260px;
+        height: 400px;
+    }
+
+}
+
+
+/*------ laptops pequeno 1100px -------*/
+@media only screen and (min-width: 901px) and (max-width: 1100px){
+    /*navbar*/
+    .header{
+        width: 85vw;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .header a img{
+        width: 95px;
+        height: 95px;
+    }
+    .header .navbar ul li a{
+        font-size: 25px;
+        padding:2px 3px;
+        margin:0;
+    }
+
+    /*Section Inicio*/
+
+    .inicio .apresentacao h1{
+        font-size: 50px;
+    }
+    .flex .btn-Mais-Sobre img{
+        height: 160px;
+        width: 160px;
+    }
+    .flex .btn-Mais-Sobre button{
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+    .inicio .apresentacao p{
+        font-size: 25px;
+    }
+    .flex .img-section1 img{
+        width: 400px;
+        height: 400px;
+    }
+
+
+    /*Section sobre*/
+
+    .sobre .text-Sobre{
+        width: 50vw;
+    }
+    .sobre .text-Sobre h3{
+        font-size: 45px;
+    }
+    .sobre .text-Sobre p{
+        font-size: 20px;
+    }
+    .sobre .sobre-Esquerda{
+        float:right;
+    }
+    .sobre .sobre-Esquerda img{
+        display: none;
+    }
+
+    .sobre .sobre-Direita{
+        display: flex;
+        flex-direction: column;
+        margin-right: 18px;
+        align-items: center;
+        justify-content: center;
+    }
+    .sobre .sobre-Direita img{
+        width: 200px;
+        height: 280px;
+    }
+    .sobre .sobre-Direita .imgRepansividade{
+        display: block;
+        width: 250px;
+        height: 250px;
+    }
+
+
+    /*Projetos*/
+    .projetos .img-projetos{
+        width: 250px;
+        height: 400px;
+    }
+
+    /*Contatos*/
+    .contato .interface h2{
+        margin-bottom: 150px;
+    }
+
+    .contato .flex{
+        margin-right: 40px;
+    }
+
+    .contato img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .contato .card-Contato{
+        width: 200px;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    .contato .card-Contato h3{
+        font-size: 30px;
+    }
+    .contato .card-Contato #icon-Link{
+        font-size: 45px;
+    }
+
+    .contato .card-Contato p{
+        font-size: 12px;
+    }
+
+    /*Footer*/
+    
+    footer .flex .btn-Footer{
+        width: 60px;
+        height: 60px;
+    }
+    .btn-Footer i{
+        font-size: 30px;
+    }
+}
+
+/*------ tablet 900px-------*/
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    /*navbar*/
+    .header{
+        width: 85vw;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .header a img{
+        width: 95px;
+        height: 95px;
+    }
+    .header .navbar ul li a{
+        font-size: 13px;
+        padding:0;
+        margin:0;
+    }
+
+    /*Section inicio*/
+    .inicio .flex .apresentacao .text{
+        font-size: 33px;
+        margin-bottom: 0;
+    }
+    .inicio .flex .apresentacao p{
+        font-size: 20px;
+    }
+
+    .inicio .flex .img-section1 img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .inicio .interface .flex .apresentacao .btn-Mais-Sobre img{
+        height: 150px;
+        width: 150px;
+    }
+    .inicio .interface .flex .apresentacao .btn-Mais-Sobre button{
+        width: 130px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    /*Section sobre*/
+    .sobre .text-Sobre{
+        width: 50vw;
+    }
+    .sobre .text-Sobre h3{
+        font-size: 45px;
+    }
+    .sobre .text-Sobre p{
+        font-size: 20px;
+    }
+    .sobre .sobre-Esquerda{
+        float:right;
+    }
+    .sobre .sobre-Esquerda img{
+        display: none;
+    }
+
+    .sobre .sobre-Direita{
+        display: flex;
+        flex-direction: column;
+        margin-right: 18px;
+        align-items: center;
+        justify-content: center;
+    }
+    .sobre .sobre-Direita img{
+        width: 200px;
+        height: 280px;
+    }
+    .sobre .sobre-Direita .imgRepansividade{
+        display: block;
+        width: 250px;
+        height: 250px;
+    }
+
+    /*Projetos*/
+    .projetos .flex{
+        flex-direction: column;
+    }
+    .projetos .img-projetos{
+        width: 250px;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+
+    /*Contatos*/
+    .contato .flex{
+        flex-direction: column;
+    }
+
+    .flex img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .flex .card-Contato{
+        width: 260px;
+        height: 400px;
+    }
+
+
+}
+
+
+/*------ Mobile 576px -------*/
+@media (max-width: 576px) {
+    /*Geral*/
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+    .interface{
+        padding-top: 30px;
+    }
+    
+    /*navbar*/
+    
+    
+    .header{
+        margin-left: 90%;
+        margin: 30px auto;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 50px;
+        width: 90vw;
+    }
+
+    .header .navbar{
+        justify-content: end;
+        width: 90vw;
+        position: fixed;
+    }
+
+    .header .navbar .navbarBtn{
+        display: block;
+        z-index: 1;
+    }
+
+    .header .navbar a img{
+        display: none;
+    }
+
+    .navbar ul a{
+        font-size: 25px;
+        opacity: 0;
+    }
+
+    .navbar ul li:nth-child(1) a{
+        transition: 0.5s 0.2s;
+    }
+    .navbar ul li:nth-child(2) a{
+        transition: 0.5s 0.3s;
+    }
+    .navbar ul li:nth-child(3) a{
+        transition: 0.5s 0.4s;
+    }
+    .navbar ul li:nth-child(4) a{
+        transition: 0.5s 0.5s;
+    }
+    .navbar ul li:nth-child(5) a{
+        transition: 0.5s 0.6s;
+    }
+
+    .navbar ul{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #131313;
+        clip-path: circle(100px at 99% -20%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    /*estilos ativos nav-mobile*/
+    nav.active ul{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    nav.active ul a{
+        opacity: 1;
+    }
+
+    .navbar.active .navbarBtn{
+        position: fixed;
+        top: 26px;
+        left: 16px;
+        border-top-color: transparent;
+    }
+
+    nav.active .navbarBtn::before{
+        transform: rotate(135deg);
+    }
+    nav.active .navbarBtn::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    
+    /*Section Inicio*/
+    .inicio .flex{
+        flex-direction: column-reverse;
+    }
+    .inicio .apresentacao h1{
+        margin:0;
+        text-align: left;
+        font-size: 60px;
+        padding: 8px;
+    }
+    .inicio .apresentacao p{
+        font-size: 25px;
+        padding: 5px;
+    }
+    .flex .btn-Mais-Sobre img{
+        height: 150px;
+        width: 150px;
+    }
+    .flex .btn-Mais-Sobre button{
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .flex .img-section1 img{
+        width: 400px;
+        height: 400px;
+        z-index: -1;
+    }
+
+    /*Section Habilidades*/
+    section.habilidades{
+        padding: 10px;
+    }
+    
+    .habilidades .interface{
+        padding-top: 30px;
+    }
+    
+    /*Section Sobre*/
+
+    .sobre .text-Sobre h3{        
+        line-height: 50px;
+    }
+    .sobre .text-Sobre{
+        width: 80vw;
+    }
+
+    .sobre .sobre-Esquerda img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .sobre .sobre-Direita .imgRepansividade{
+        display:none;
+    }    
+
+    .sobre .sobre-Direita img{
+        width: 280px;
+        height: 380px;
+    }
+
+    /*section projetos*/
+
+    .projetos .interface h2{
+        margin-bottom: 80px;
+    }
+
+    .projetos .img-projetos{
+        z-index: -1;
+        width: 300px;
+        height: 450px;
+        margin: 20px;
+    }
+
+
+    /*Section Contatos*/
+    .flex img{
+        width: 300px;
+        height: 300px;
+    } 
+    .contato .interface h2{
+        margin-bottom: 80px;
+    }
+    .card-Contato{
+        width: 260px;
+        height: 400px;
+    }
+
+    /*footer*/
+    footer .flex{
+        flex-direction: row;
+        padding: 30px;
+    }
+    footer .flex .btn-Footer{
+        width: 60px;
+        height: 60px;
+    }
+    .btn-Footer i{
+        font-size: 2rem;
+    }
+}
+
+/*Fim respansividade*/
